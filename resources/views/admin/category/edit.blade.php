@@ -9,8 +9,9 @@
                         </h3>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('admin/category')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{url('admin/category/'.$category->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="name">Name</label>
@@ -35,7 +36,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="status">Status</label></br>
-                                    <input type="checkbox" name="status" id="" {{$category->status}}>
+                                    <input type="checkbox" name="status" id="" {{$category->status == '1' ?'':'checked'}}>
                                 </div>
                                 <div class="col-md-12 bg-light mb-3">
                                     <h4>SEO tags</h4>
@@ -47,12 +48,12 @@
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="meta_keyword">Meta Keyword</label>
-                                    <input type="text" name="meta_keyword" class="form-control" id="" alue="{{$category->meta_keyword}}">
+                                    <input type="text" name="meta_keyword" class="form-control" id="" value="{{$category->meta_keyword}}">
                                     @error('meta_keyword') <small class="text-danger">{{$message}}</small> @enderror
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="meta_description">Meta Description</label>
-                                    <input type="text" name="meta_description" class="form-control" id="" alue="{{$category->meta_description}}">
+                                    <input type="text" name="meta_description" class="form-control" id="" value="{{$category->meta_description}}">
                                     @error('meta_description') <small class="text-danger">{{$message}}</small> @enderror
                                 </div>
                                 <div class="col-md-12 mb-3">
