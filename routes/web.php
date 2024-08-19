@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Livewire\Livewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::put('category/{category}','update');
     });
 
-    // Route::get('category',[App\Http\Controllers\Admin\CategoryController::class,'index']);
-    // Route::get('category/create',[App\Http\Controllers\Admin\CategoryController::class,'create']);
-    // Route::post('category',[App\Http\Controllers\Admin\CategoryController::class,'store']);
+    // Brand 
+    Route::get('/brands', App\Http\Livewire\Admin\Brand\Index::class);    
 });

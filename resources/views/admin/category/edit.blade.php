@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="status">Status</label></br>
-                                    <input type="checkbox" name="status" id="" {{$category->status == '1' ?'':'checked'}}>
+                                    <input type="checkbox" name="status" id="" {{$category->status == '1' ? 'checked':''}}>
                                 </div>
                                 <div class="col-md-12 bg-light mb-3">
                                     <h4>SEO tags</h4>

@@ -45,7 +45,7 @@ class CategoryController extends Controller
     public function edit(Category $category){
         return view('admin.category.edit',compact('category'));
     }
-    public function update(CategoryFormRequest $request,$category) {
+    public function update(CategoryFormRequest $request, $category) {
         $category = Category::findOrFail($category);
 
         $validatedData = $request->validated();
@@ -55,7 +55,9 @@ class CategoryController extends Controller
         $category->meta_title = $validatedData['meta_title'];
         $category->meta_keyword = $validatedData['meta_keyword'];
         $category->meta_description = $validatedData['meta_description'];
-        $category->status = $request->status == 'true' ? '1':'0';
+        $category->status = $request->status == 'true' ? '1' : '0';
+
+        // dd($request->status);
         if ($request->hasFile('image'))
         {
             $path = 'uploads/category/'.$category->image;
