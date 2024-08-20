@@ -55,8 +55,8 @@
             </div>
             <div wire:loading>
                 <div class="spinner-border " role="status">
-                    <span class="sr-only text-center">Loading...</span>
-                </div>
+                    <span class="sr-only text-center"></span>
+                </div>Loading...
             </div>
             <div wire:loading.remove>
                 <form wire:submit.prevent = "updateBrand">
@@ -89,6 +89,37 @@
                         <button type="button" class="btn btn-secondary" wire:click = "closeModal"
                             data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- Delete Modal --}}
+<div wire:ignore.self class="modal fade" id="deleteBrandModal" tabindex="-1" aria-labelledby="deleteBrandModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteBrandModalLabel">Delete Brand</h5>
+                <button type="button" class="btn-close" wire:click = "closeModal" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div wire:loading>
+                <div class="spinner-border " role="status">
+                    <span class="sr-only text-center"></span>
+                </div>Loading...
+            </div>
+            <div wire:loading.remove>
+                <form wire:submit.prevent = "destroyBrand">
+                    <div class="modal-body">
+                        <h4>Are you sure you want to delete this data?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" wire:click = "closeModal"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Delete</button>
                     </div>
                 </form>
             </div>
