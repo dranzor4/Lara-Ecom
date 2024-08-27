@@ -15,8 +15,25 @@
             </a>
             <div class="collapse" id="category">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="{{url('admin/category/create')}}">Add Category</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('admin/category/create-category')}}">Add Category</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('admin/category')}}">View Category</a></li>
+                </ul>
+            </div>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#products" aria-expanded="false"
+                aria-controls="products">
+                <i class="fa fa-plus-square menu-icon"></i>
+                <span class="menu-title">Products</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="products">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{url('admin/products/create-products')}}">Add Products</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('admin/products')}}">View Products</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
                 </ul>
             </div>
         </li>
@@ -25,21 +42,6 @@
                 <i class="fa fa-list-ul menu-icon"></i>
                 <span class="menu-title">Brands</span>
             </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                aria-controls="ui-basic">
-                <i class="fa fa-list-ul menu-icon"></i>
-                <span class="menu-title">UI Elements</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-            </div>
         </li>
         
     </ul>
