@@ -23276,10 +23276,10 @@ code {
 select.form-control, select.typeahead,
 select.tt-query,
 select.tt-hint, .select2-container--default .select2-selection--single select.select2-search__field, .select2-container--default select.select2-selection--single, .dataTables_wrapper select {
-  padding: 0.4375rem 0.75rem;
+  /* padding: 0.4375rem 0.75rem; */
   border: 0;
   outline: 1px solid #f3f3f3;
-  color: #c9c8c8;
+  /* color: #c9c8c8; */
   appearance: none;
   background: url("../../../assets/images/arrow-down.svg");
   background-repeat: no-repeat;
